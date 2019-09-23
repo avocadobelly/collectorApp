@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
 # Database: House_Plants
-# Generation Time: 2019-09-23 12:43:26 +0000
+# Generation Time: 2019-09-23 14:25:58 +0000
 # ************************************************************
 
 
@@ -23,14 +23,28 @@
 # Dump of table House_Plants
 # ------------------------------------------------------------
 
+DROP TABLE IF EXISTS `House_Plants`;
+
 CREATE TABLE `House_Plants` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `latin_name` varchar(255) NOT NULL DEFAULT '',
   `level_of_watering` varchar(5) NOT NULL DEFAULT '',
-  `level_of_sunlight` varchar(8) DEFAULT NULL,
+  `level_of_sunlight` varchar(8) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `House_Plants` WRITE;
+/*!40000 ALTER TABLE `House_Plants` DISABLE KEYS */;
+
+INSERT INTO `House_Plants` (`id`, `latin_name`, `level_of_watering`, `level_of_sunlight`)
+VALUES
+	(1,'Philodendron Scandens','light','bright'),
+	(2,'Hedera Helix','light','bright'),
+	(3,'Pilea Involucrata','heavy','moderate'),
+	(4,'Peperomia Caperata','light','low');
+
+/*!40000 ALTER TABLE `House_Plants` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 
