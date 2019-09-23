@@ -8,3 +8,6 @@ $db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO:: FETCH_ASSOC);
 $query= $db -> query('SELECT `latin_name`, `level_of_watering`, `level_of_sunlight` FROM House_Plants');
 
 $House_PLants = $query -> fetchAll();
+
+var_dump($House_Plants);
+
