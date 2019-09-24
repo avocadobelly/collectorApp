@@ -1,6 +1,5 @@
 <?php
 
-
 //Set up connection to the DB.
 $db = new PDO('mysql:host=db;dbname=House_Plants', 'root', 'password');
 //Told PDO to return an associative array.
