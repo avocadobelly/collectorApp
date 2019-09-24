@@ -21,7 +21,7 @@ $House_Plants = $query->fetchAll();
 <body>
 
 <?php
-      list_of_plants($House_Plants);
+      echo list_of_plants($House_Plants);
 ?>
 
 </body>
