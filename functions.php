@@ -1,7 +1,14 @@
 <?php
 
-function list_of_plants($plant_db){
+function list_of_plants($House_Plants) {
+    //each row is an individual plant
     foreach($House_Plants as $plant) {
-        echo $plant ['latin_name'], ['watering_level'], ['level_of_sunlight'];
+        //display this data from each row
+        echo '<div>' .
+                '<h1>'. $plant['latin_name'] . '</h1>' .
+                '<h3>' . 'Level of Watering: ' . $plant['level_of_watering'] . '</h3>' .
+                '<h3>' . 'Level of Sunlight: ' . $plant['level_of_sunlight'] . '</h3>' .
+            '</div>';
     }
 }
+
