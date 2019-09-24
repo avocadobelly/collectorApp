@@ -10,11 +10,11 @@
 function list_of_plants($House_Plants) {
     $result = '';
     foreach($House_Plants as $plant) {
-        $result .= '<div>' .
-                '<h1>'. $plant['latin_name'] . '</h1>' .
-                '<h3>' . 'Level of Watering: ' . $plant['level_of_watering'] . '</h3>' .
-                '<h3>' . 'Level of Sunlight: ' . $plant['level_of_sunlight'] . '</h3>' .
-            '</div>';
+        $result .= '<div>
+                        <h1>'. $plant['latin_name'] . '</h1>
+                        <h3>' . 'Level of Watering: ' . $plant['level_of_watering'] . '</h3>
+                        <h3>' . 'Level of Sunlight: ' . $plant['level_of_sunlight'] . '</h3>
+                    </div>';
     }
     return $result;
 }
