@@ -10,3 +10,16 @@ $query = $db->query('SELECT `latin_name`, `level_of_watering`, `level_of_sunligh
 $House_Plants = $query->fetchAll();
 //output to the browser
 var_dump($House_Plants);
+
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Display Page</title>
+    </head>
+<body>
+
+</body>
+</html>
