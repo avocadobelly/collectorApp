@@ -10,12 +10,19 @@
 function list_of_plants($House_Plants) {
     $result = '';
     foreach($House_Plants as $plant) {
-        $result .= '<div>
+        //if the result returns a string and the plant variable returns an array then the code will run
+        if (gettype($plant['latin_name']) === 'string'  && gettype($plant['level_of_watering'] === 'string') && gettype($plant['level_of_sunlight'] === 'string')){
+            //if the result returns anything but a string or the plant variable returns anything but an array then an error message will be displayed
+            $result .= '<div>
                         <h1>' . $plant['latin_name'] . '</h1>
                         <h3>' . 'Level of Watering: ' . $plant['level_of_watering'] . '</h3>
                         <h3>' . 'Level of Sunlight: ' . $plant['level_of_sunlight'] . '</h3>
                     </div>';
+        } else {
+            return 'Retrieved wrong input type from database';
+        }
     }
     return $result;
+
 }
 
