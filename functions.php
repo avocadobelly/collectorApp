@@ -5,7 +5,7 @@
 *@param array $House_Plants is the database where all info on the plants is stored
 *@param array $plant is a row of the database from which the function will call information on plant attributes
 *
-*@return
+*@return string of attributes for each plant
  */
 function list_of_plants($House_Plants) {
     $result = '';
