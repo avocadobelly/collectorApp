@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 *Pulls information from House Plants database.
 *
 *@return array of information in the database.
@@ -12,7 +12,7 @@ function getDataFromDatabase(): array {
 
     return $House_Plant_DB;
 }
-/*
+/**
 *Pulls information from specified data fields in the House_Plants Database.
 *
 *@param array $House_Plant_DB is the database where all info on the plants is stored
