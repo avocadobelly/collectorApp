@@ -1,4 +1,5 @@
 <?php
+
 /*
 *Pulls information from specified data fields in the House_Plants Database.
 *
@@ -7,7 +8,7 @@
 *
 *@return string of attributes for each plant
  */
-function list_of_plants($House_Plants) {
+function list_of_plants(array $House_Plants): string{
     $result = '';
     foreach($House_Plants as $plant) {
         //if the result returns a string and the plant variable returns an array then the code will run
