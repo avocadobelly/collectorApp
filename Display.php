@@ -2,7 +2,6 @@
 //sets up connection to functions file
 require_once('functions.php');
 $House_Plant_DB = getDataFromDatabase();
-
 ?>
 
 <!DOCTYPE html>
