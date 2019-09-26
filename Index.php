@@ -1,11 +1,7 @@
 <?php
 require_once('functions.php');
-// CAll the db connection function here
-// $db = dbConnection();
-//$House_Plant_DB = getDataFromDatabase($db);
 $House_Plant_DB = getDataFromDatabase();
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
