@@ -24,6 +24,8 @@
             <div>
                 Level of sunlight needed:
                 <input type=text" name="level_of_sunlight">
+                <br>
+                <input type="submit" value="Add to collection">
             </div>
         </fieldset>
     </form>
