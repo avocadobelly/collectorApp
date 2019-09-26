@@ -5,7 +5,7 @@
 *@return array of information in the database.
  */
 function getDataFromDatabase(): array {
-    $db = new PDO('mysql:host=db;dbname=House_Plants', 'root', 'password');
+    $db = new PDO('mysql:host=db;dbname=House_Plants_2019-09-23', 'root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO:: FETCH_ASSOC);
     $query = $db->query('SELECT `latin_name`, `level_of_watering`, `level_of_sunlight` FROM `House_Plants`');
     $House_Plant_DB = $query->fetchAll();
@@ -42,7 +42,7 @@ function list_of_plants(array $House_Plant_DB): string{
  */
 function putDataInDatabase()
 {
-    $db = new PDO('mysql:host=db;dbname=House_Plants', 'root', 'password');
+    $db = new PDO('mysql:host=db;dbname=House_Plants_2019-09-23', 'root', 'password');
     $query = $db->prepare('INSERT INTO `House_Plants` (`latin_name`, `level_of_watering`, `level_of_sunlight`) VALUES (:name, :watering, :sunlight)');
     $query->execute([':name' => $_POST['latin_name'],
     ':watering' => $_POST['level_of_watering'],
