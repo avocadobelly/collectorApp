@@ -6,8 +6,8 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
-# Database: House_Plants
-# Generation Time: 2019-09-23 14:25:58 +0000
+# Database: House_Plants_2019-09-23
+# Generation Time: 2019-09-26 14:32:01 +0000
 # ************************************************************
 
 
@@ -41,7 +41,9 @@ VALUES
 	(1,'Philodendron Scandens','light','bright'),
 	(2,'Hedera Helix','light','bright'),
 	(3,'Pilea Involucrata','heavy','moderate'),
-	(4,'Peperomia Caperata','light','low');
+	(4,'Peperomia Caperata','light','low'),
+	(7,'Ivy','Light','Moderate'),
+	(9,'Sunflower','Light','Bright');
 
 /*!40000 ALTER TABLE `House_Plants` ENABLE KEYS */;
 UNLOCK TABLES;
