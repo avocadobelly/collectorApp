@@ -18,17 +18,17 @@ if (isset($_POST['latin_name']) && isset($_POST['level_of_watering']) && isset($
         <fieldset>
             <div>
                 <label for="latin_name">Latin name of plant:</label>
-                <input type="text" name="latin_name">
+                <input type="text" name="latin_name" required>
             </div>
             <div>
                 <label for="level_of_watering">Level of watering needed:</label>
-                <input type="radio" name="level_of_watering" value="Light"checked><label for="Light" >Light</label>
+                <input type="radio" name="level_of_watering" value="Light" required><label for="Light" >Light</label>
                 <input type="radio" name="level_of_watering" value="Moderate"><label for="Moderate">Moderate</label>
                 <input type="radio" name="level_of_watering" value="Heavy"><label for="Heavy">Heavy</label>
             </div>
             <div>
                 <label for="level_of_sunlight">Level of sunlight needed:</label>
-                <input type="radio" name="level_of_sunlight" value="Low" checked><label for="Low">Low</label>
+                <input type="radio" name="level_of_sunlight" value="Low" required><label for="Low">Low</label>
                 <input type="radio" name="level_of_sunlight" value="Moderate"><label for="Moderate">Moderate</label>
                 <input type="radio" name="level_of_sunlight" value="Bright"><label for="Bright">Bright</label>
             </div>
