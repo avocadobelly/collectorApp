@@ -4,7 +4,6 @@ if (isset($_POST['latin_name']) && isset($_POST['level_of_watering']) && isset($
 {
     putDataInDatabase($_POST['latin_name'],$_POST['level_of_watering'],$_POST['level_of_sunlight']);
 }
-
 ?>
 
 <!DOCTYPE html>
