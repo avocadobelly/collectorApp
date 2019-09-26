@@ -13,7 +13,7 @@
         <fieldset>
             <div>
                 <label for="latin_name">Latin name of plant:</label>
-                <input type=text" name="latin_name">
+                <input type="text" name="latin_name">
             </div>
             <div>
                 <label for="level_of_watering">Level of watering needed:</label>
