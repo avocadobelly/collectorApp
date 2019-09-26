@@ -1,4 +1,8 @@
 <?php
+
+// Write the db connection function here
+
+
 /**
 *Pulls information from House Plants database.
 *
