@@ -4,7 +4,7 @@ use PHPUNit\Framework\TestCase;
 
 require('../functions.php');
 
-//Success test:
+//Success test for  List of Plants:
 class TestFunctions extends TestCase
 {
     public function testListOfPlants_returnsAString()
@@ -21,7 +21,7 @@ class TestFunctions extends TestCase
     }
 
 
-//Malform test:
+//Malform test for List of Plants:
     public function testListOfPlants_integersNotStrings()
     {
         $expected = 'Retrieved wrong input type from database';
@@ -31,3 +31,4 @@ class TestFunctions extends TestCase
         $this->assertEquals($expected, $case);
     }
 }
+
