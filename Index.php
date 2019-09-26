@@ -13,6 +13,6 @@ $House_Plant_DB = getDataFromDatabase();
 <?php
  echo list_of_plants($House_Plant_DB);
 ?>
-
+<a href = "http://localhost:1234/collectorApp/Input.php">Add to the collection</a>
 </body>
 </html>

@@ -34,5 +34,6 @@ if (isset($_POST['latin_name']) && isset($_POST['level_of_watering']) && isset($
             <input type="submit" value="Add to collection">
         </fieldset>
     </form>
+    <a href = "http://localhost:1234/collectorApp/Index.php">See Collection</a>
 </body>
 </html>
