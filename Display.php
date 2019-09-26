@@ -1,5 +1,4 @@
 <?php
-//sets up connection to functions file
 require_once('functions.php');
 $House_Plant_DB = getDataFromDatabase();
 ?>
@@ -13,7 +12,6 @@ $House_Plant_DB = getDataFromDatabase();
 <body>
 
 <?php
-//calls list_of_plants function and echoes the result
  echo list_of_plants($House_Plant_DB);
 ?>
 
