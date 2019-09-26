@@ -30,15 +30,5 @@ class TestFunctions extends TestCase
 
         $this->assertEquals($expected, $case);
     }
-
-    //success test for put in DB
-    public function putDataInDatabase()
-    {
-        $db = new PDO('mysql:host=db;dbname=House_Plants_2019-09-23', 'root', 'password');
-        $query = $db->prepare('INSERT INTO `House_Plants` (`latin_name`, `level_of_watering`, `level_of_sunlight`) VALUES (:name, :watering, :sunlight)');
-        $query->execute([':name' => 'Peperomia Perciliata',
-            ':watering' => 'Moderate',
-            ':sunlight' => 'Bright']);
-    }
 }
 
