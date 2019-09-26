@@ -9,7 +9,7 @@
         <title> Input Page</title>
     </head>
 <body>
-    <form method="post" action="/Display.php">
+    <form method="post" action="/functions.php">
         <fieldset>
             <div>
                 Latin name of plant:
