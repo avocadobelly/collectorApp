@@ -15,6 +15,9 @@ body {
 .plant {
     float: left;
     width: 33.3%;
+    /*border-color: #ffffff;*/
+    /*border-width: 1px;*/
+    /*border-radius: 25px;*/
 }
 
 h1 {
