@@ -10,8 +10,8 @@ $House_Plant_DB = getDataFromDatabase();
         <link href="normalize.css" rel="stylesheet" type="text/css">
         <link href="Styles.css" rel="stylesheet" type="text/css">
     </head>
-<body>
-    <div>
+<body class="collection">
+    <div class="plant">
         <?php
         echo list_of_plants($House_Plant_DB);
         ?>

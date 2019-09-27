@@ -9,4 +9,29 @@ html {
 body {
     margin: 0;
     padding: 0;
+    overflow: auto;
+}
+
+.plant {
+    float: left;
+    width: 33.3%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+.collection {
+    background-color: green;
+    background-image: https://cdn.pixabay.com/photo/2019/04/28/01/49/room-4161940_1280.jpg;
+}
+
+a {
+    text-decoration: none;
 }
