@@ -16,7 +16,6 @@ function getDataFromDatabase(): array {
 *Pulls information from specified data fields in the plants Database.
 *
 *@param array $plantsDB is the database where all info on the plants is stored
-*@param array $plant is a row of the database from which the function will call information on plant attributes
 *
 *@return string of attributes for each plant
  */
@@ -39,6 +38,7 @@ function list_of_plants(array $plantsDB): string{
 
 /**
  *Puts user entered information into the plants database.
+ *
  * @param $name
  * @param $watering
  * @param $sunlight
