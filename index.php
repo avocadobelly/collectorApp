@@ -7,9 +7,9 @@ $House_Plant_DB = getDataFromDatabase();
     <head>
         <meta charset="UTF-8">
         <title> Display Page</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
-<body>
-
+<body class="background">
 <?php
  echo list_of_plants($House_Plant_DB);
 ?>
