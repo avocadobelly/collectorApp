@@ -1,29 +1,29 @@
 <?php
 /**
-*Pulls information from House Plants database.
+*Pulls information from plants database.
 *
 *@return array of information in the database.
  */
 function getDataFromDatabase(): array {
-    $db = new PDO('mysql:host=db;dbname=House_Plants_2019-09-23', 'root', 'password');
+    $db = new PDO('mysql:host=db;dbname=plants', 'root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO:: FETCH_ASSOC);
     $query = $db->query('SELECT `latin_name`, `level_of_watering`, `level_of_sunlight` FROM `House_Plants`');
-    $House_Plant_DB = $query->fetchAll();
+    $plantsDB = $query->fetchAll();
 
-    return $House_Plant_DB;
+    return $plantsDB;
 }
 /**
-*Pulls information from specified data fields in the House_Plants Database.
+*Pulls information from specified data fields in the plants Database.
 *
-*@param array $House_Plant_DB is the database where all info on the plants is stored
+*@param array $plantsDB is the database where all info on the plants is stored
 *@param array $plant is a row of the database from which the function will call information on plant attributes
 *
 *@return string of attributes for each plant
  */
-function list_of_plants(array $House_Plant_DB): string{
+function list_of_plants(array $plantsDB): string{
     $result = '';
-    foreach($House_Plant_DB as $plant) {
-        if (gettype($plant['latin_name']) === 'string'  && gettype($plant['level_of_watering'] === 'string') && gettype($plant['level_of_sunlight'] === 'string')){
+    foreach($plantsDB as $plant) {
+        if (gettype($plant['name']) === 'string'  && gettype($plant['watering'] === 'string') && gettype($plant['sunlight'] === 'string')){
             $result .= '<div>
                         <h1>' . $plant['latin_name'] . '</h1>
                         <h3>' . 'Level of Watering: ' . $plant['level_of_watering'] . '</h3>
@@ -38,14 +38,16 @@ function list_of_plants(array $House_Plant_DB): string{
 }
 
 /**
- *Puts user entered information into the House Plants database.
+ *Puts user entered information into the plants database.
+ * @param $name
+ * @param $watering
+ * @param $sunlight
  */
-function putDataInDatabase($latinName, $watering, $sunlight)
+function putDataInDatabase($name, $watering, $sunlight)
 {
-    $db = new PDO('mysql:host=db;dbname=House_Plants_2019-09-23', 'root', 'password');
-    $query = $db->prepare('INSERT INTO `House_Plants` (`latin_name`, `level_of_watering`, `level_of_sunlight`) VALUES (:name, :watering, :sunlight)');
-    $query->execute([':name' => $latinName,
+    $db = new PDO('mysql:host=db;dbname=plants', 'root', 'password');
+    $query = $db->prepare('INSERT INTO `housePlants` (`name`, `watering`, `sunlight`) VALUES (:name, :watering, :sunlight)');
+    $query->execute([':name' => $name,
     ':watering' => $watering,
     ':sunlight' => $sunlight]);
 }
-
